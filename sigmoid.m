@@ -16,6 +16,8 @@ if a > b
     error("a,b have to be in order.")
 end
 
+m = (a + b) / 2;
+
 X = linspace(a - tam_extra,b + tam_extra,muestras);
 
 Y = [ 
