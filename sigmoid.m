@@ -1,22 +1,20 @@
-function [X,Y] = sigmoid(a,b,muestras,tam_extra)
+function [X,Y] = sigmoid(a,m,b,muestras,tam_extra)
 
-if nargin < 2
+if nargin < 3
     error("Noy enought arguments.")
 end
 
-if nargin < 3
+if nargin < 4
     muestras = 1000;
 end
 
-if nargin < 4
+if nargin < 5
     tam_extra = (d-a) / 2;
 end
 
-if a > b
-    error("a,b have to be in order.")
+if a > b || a > m || b < m
+    error("a,m,b have to be in order.")
 end
-
-m = (a + b) / 2;
 
 X = linspace(a - tam_extra,b + tam_extra,muestras);
 
